@@ -1109,6 +1109,8 @@ body {
 	&__form {
 		text-align: center;
 		@include adaptiv-value("padding-bottom", 50, 20, 1);
+		padding-left: 15px;
+		padding-right: 15px;
 		label {
 			font-style: normal;
 			font-weight: 300;
@@ -1713,6 +1715,9 @@ body {
 	/* .contacts-page__row */
 	&__row {
 		display: flex;
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
 	}
 	/* .contacts-page__column */
 	&__column {
@@ -1724,6 +1729,9 @@ body {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@media (max-width: 992px) {
+				padding-top: 20px;
+			}
 		}
 	}
 	/* .contacts-page__img */
@@ -1754,11 +1762,22 @@ body {
 		position: relative;
 		z-index: 2;
 		transform: translateX(50%);
+		@media (max-width: 500px) {
+			transform: translateX(0%);
+			margin: 0 auto;
+		}
 	}
 	/* .contacts-page__form */
 	&__form {
-		@include adaptiv-value("padding-left", 250, 100, 1);
-		@include adaptiv-value("padding-right", 250, 100, 1);
+		margin-left: auto;
+		width: 100%;
+		max-width: 50%;
+		@include adaptiv-value("margin-right", 150, 20, 1);
+		@media (max-width: 992px) {
+			margin: 0 auto;
+			padding: 0 15px;
+			max-width: 550px;
+		}
 	}
 	/* .contacts-page__map */
 	&__map {
@@ -1776,14 +1795,6 @@ body {
 		}
 	}
 }
-.square-info {
-	/* .square-info__title */
-	&__title {
-	}
-	/* .square-info__contacts */
-	&__contacts {
-	}
-}
 .form {
 	/* .form__title */
 	&__title {
@@ -1794,7 +1805,10 @@ body {
 		margin-bottom: 20px;
 		&_checkbox {
 			position: relative;
-			height: 50px;
+			min-height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			@include adaptiv-value("margin-bottom", 70, 30, 1);
 		}
 	}
@@ -1806,6 +1820,9 @@ body {
 		background-color: #fff;
 		font-size: 16px;
 		font-family: inherit;
+		@media (max-width: 768px) {
+			height: 50px;
+		}
 		&:focus {
 			outline: 0;
 			background: $grad;
@@ -1822,7 +1839,8 @@ body {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .form__label:before {
-			top: 5px;
+			top: 50%;
+			transform: translateY(-50%);
 			left: 5px;
 			width: 40px;
 			height: 40px;
@@ -1840,7 +1858,8 @@ body {
 		&::after {
 			content: "";
 			position: absolute;
-			top: 0;
+			top: 50%;
+			transform: translateY(-50%);
 			left: 0;
 			width: 50px;
 			height: 50px;
@@ -1849,8 +1868,9 @@ body {
 		&::before {
 			content: "";
 			position: absolute;
-			top: 25px;
+			top: 50%;
 			left: 25px;
+			transform: translateY(-50%);
 			width: 0;
 			height: 0;
 			background-color: $text;
