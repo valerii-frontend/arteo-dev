@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap");
+@font-face {
+	font-family: "arteo-font";
+	src: url("../fonts/arteo-font.eot?cmktef");
+	src: url("../fonts/arteo-font.eot?cmktef#iefix") format("embedded-opentype"),
+		url("../fonts/arteo-font.ttf?cmktef") format("truetype"), url("fonts/arteo-font.woff?cmktef") format("woff"),
+		url("../fonts/arteo-font.svg?cmktef#arteo-font") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "arteo-font" !important;
+	speak-as: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo-full:before {
+	content: "\e91d";
+}
+.icon-accept:before {
+	content: "\e900";
+}
+.icon-bag:before {
+	content: "\e901";
+}
+.icon-bicycle:before {
+	content: "\e902";
+}
+.icon-building:before {
+	content: "\e903";
+}
+.icon-bus:before {
+	content: "\e904";
+}
+.icon-callback:before {
+	content: "\e905";
+}
+.icon-car-charger:before {
+	content: "\e906";
+}
+.icon-cart:before {
+	content: "\e907";
+}
+.icon-door:before {
+	content: "\e908";
+}
+.icon-facebook:before {
+	content: "\e909";
+}
+.icon-forest:before {
+	content: "\e90a";
+}
+.icon-hand:before {
+	content: "\e90b";
+}
+.icon-heart:before {
+	content: "\e90c";
+}
+.icon-hybrid:before {
+	content: "\e90d";
+}
+.icon-instagram:before {
+	content: "\e90e";
+}
+.icon-keys:before {
+	content: "\e90f";
+}
+.icon-light:before {
+	content: "\e910";
+}
+.icon-logo:before {
+	content: "\e911";
+}
+.icon-mail:before {
+	content: "\e912";
+}
+.icon-map:before {
+	content: "\e913";
+}
+.icon-open-mail:before {
+	content: "\e914";
+}
+.icon-park:before {
+	content: "\e915";
+}
+.icon-pdf:before {
+	content: "\e916";
+}
+.icon-phone:before {
+	content: "\e917";
+}
+.icon-right-arrow:before {
+	content: "\e918";
+}
+.icon-left-arrow:before {
+	content: "\e91e";
+}
+.icon-stairs:before {
+	content: "\e919";
+}
+.icon-sun-battery:before {
+	content: "\e91a";
+}
+.icon-time:before {
+	content: "\e91b";
+}
+.icon-window:before {
+	content: "\e91c";
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Arteo | Wybór mieszkania</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header _pp">
+				<div class="header__row">
+					<div class="header__logo">
+						<a href="index.html" class="logo">
+							<picture>
+								<source srcset="./img/logo-o.png" media="(max-width: 576px)" />
+								<img src="./img/logo.png" alt="logo" />
+							</picture>
+						</a>
+					</div>
+					<div class="header__menu">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li><a href="index.html">HOME</a></li>
+								<li class="current-menu-item"><a href="list.html">wybór mieszkania</a></li>
+								<li><a href="flat.html">wizualizacje</a></li>
+								<li><a href="location.html">lokalizacja</a></li>
+								<!-- <li><a href="#">aktualności</a></li> -->
+								<li><a href="contacts.html">kontakt</a></li>
+								<li class="fixed__icons">
+									<a href="tel:+48600600600" class="fixed__icon">
+										<i class="icon-phone"></i>
+									</a>
+									<a target="_blank" href="mailto:biuro@arteodevelopment.pl" class="fixed__icon"
+										><i class="icon-mail"></i>
+									</a>
+									<a target="_blank" target="_blank" href="https://www.facebook.com" class="fixed__icon">
+										<i class="icon-facebook"></i>
+									</a>
+									<a target="_blank" href="https://www.instagram.com" class="fixed__icon"
+										><i class="icon-instagram"></i>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__contacts">
+						<div class="sell">
+							<span class="sell__text">Sprzedaż mieszkań</span
+							><a href="tel:+48600600600" class="sell__phone btn btn_header"
+								><span>+48 600 600 600</span><i class="icon-phone"></i
+							></a>
+						</div>
+					</div>
+					<div class="header__icon">
+						<div class="header__toogle"><span></span></div>
+					</div>
+				</div>
+			</header>
+			<!-- /.header -->
+			<div class="fixed">
+				<div class="fixed__icons">
+					<a href="tel:+48600600600" class="fixed__icon"><i class="icon-phone"></i></a>
+					<a target="_blank" href="mailto:biuro@arteodevelopment.pl" class="fixed__icon"><i class="icon-mail"></i></a>
+					<a target="_blank" target="_blank" href="https://www.facebook.com" class="fixed__icon"
+						><i class="icon-facebook"></i
+					></a>
+					<a target="_blank" href="https://www.instagram.com" class="fixed__icon"><i class="icon-instagram"></i></a>
+				</div>
+			</div>
+			<!-- fixed -->
+			<main class="page">
+				<div class="filter">
+					<div class="filter__container _container">
+						<h2 class="filter__title section-title">Wybierz mieszkanie dla siebie</h2>
+						<div class="filter__block">
+							<div class="filter__header">
+								<div class="filter__name">Wybrane parametry</div>
+								<div class="filter__clear btn">WYCZYŚĆ FILTRY X</div>
+							</div>
+							<div class="filter__row">
+								<div class="filter__col">
+									<p>Metraż [m2]</p>
+									<div class="filter__range">
+										<input type="number" id="area-max" disabled />
+										<div id="area-filter"></div>
+
+										<input type="text" id="area-min" disabled />
+									</div>
+								</div>
+								<div class="filter__col">
+									<p>Piętro</p>
+									<div class="filter__range">
+										<input type="number" id="floor-max" disabled />
+										<div id="floor-filter"></div>
+										<input type="number" id="floor-min" disabled />
+									</div>
+								</div>
+								<div class="filter__col">
+									<p>Pokoje [liczba]</p>
+									<div class="filter__checkboxes">
+										<div class="filter__box">
+											<input class="filter__radio" type="radio" name="rooms" data-value="1" id="rooms1" /><label
+												for="rooms1"
+												>1</label
+											>
+										</div>
+										<div class="filter__box">
+											<input class="filter__radio" type="radio" name="rooms" data-value="2" id="rooms2" /><label
+												for="rooms2"
+												>2</label
+											>
+										</div>
+										<div class="filter__box">
+											<input class="filter__radio" type="radio" name="rooms" data-value="3" id="rooms3" /><label
+												for="rooms3"
+												>3</label
+											>
+										</div>
+										<div class="filter__box">
+											<input class="filter__radio" type="radio" name="rooms" data-value="4" id="rooms4" /><label
+												for="rooms4"
+												>4</label
+											>
+										</div>
+										<div class="filter__box">
+											<input class="filter__radio" type="radio" name="rooms" data-value="5" id="rooms5" /><label
+												for="rooms5"
+												>5</label
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filter__row">
+								<div class="filter__col filter__col_50">
+									<p>Cechy dodatkowe</p>
+									<div class="filter__checkboxes">
+										<div class="filter__box filter__box_options">
+											<input class="filter__checkbox" type="checkbox" name="options1" id="option1" /><label
+												for="option1"
+												>BALKON</label
+											>
+										</div>
+										<div class="filter__box filter__box_options">
+											<input class="filter__checkbox" type="checkbox" name="option2" id="option2" /><label for="option2"
+												>taras</label
+											>
+										</div>
+										<div class="filter__box filter__box_options">
+											<input class="filter__checkbox" type="checkbox" name="option3" id="option3" /><label for="option3"
+												>OGRÓDEK</label
+											>
+										</div>
+										<div class="filter__box filter__box_options">
+											<input class="filter__checkbox" type="checkbox" name="option4" id="option4" /><label for="option4"
+												>KOMÓRKA</label
+											>
+										</div>
+									</div>
+								</div>
+								<div class="filter__col filter__col_50">
+									<p>Oznaczone</p>
+									<div class="filter__checkboxes filter__checkboxes_wrap">
+										<div class="filter__box filter__box_options filter__box_50">
+											<input class="filter__checkbox" type="checkbox" name="option5" id="option5" /><label for="option5"
+												>OFERTY SPECJALNE</label
+											>
+										</div>
+										<div class="filter__box filter__box_options filter__box_50">
+											<input class="filter__checkbox" type="checkbox" name="option6" id="option6" />
+											<label for="option6"><span>GOTOWE DO ODBIORU</span></label>
+										</div>
+										<div class="filter__box filter__box_options filter__box_50">
+											<input class="filter__checkbox" type="checkbox" name="option7" id="option7" /><label for="option7"
+												>WYKOŃCZONE</label
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /filter__container _container -->
+				</div>
+				<div class="home-examples">
+					<div class="_container">
+						<div class="home-examples__row">
+							<div class="home-examples__column" data-rooms="4" data-floor="2" data-area="67.5" data-options="6">
+								<div class="examples-card">
+									<div class="examples-card__header">
+										<div class="examples-card__logo">
+											<i class="icon-logo-full"></i> <span class="examples-card__number">B21</span>
+										</div>
+										<i class="icon-heart"></i>
+									</div>
+									<div class="examples-card__img">
+										<img src="./img/building-img-03.jpg" alt="examples" />
+										<div class="examples-card__offer">GOTOWE DO ODBIORU</div>
+									</div>
+									<div class="examples-card__info">
+										<span>67,50 m2</span>
+										<span>4 pokoje</span>
+										<span>2 piętro</span>
+									</div>
+									<a href="#" class="examples-card__ask">zapytaj o cenę</a>
+									<a href="flat.html" class="examples-card__link">
+										<span>Zobacz więcej</span>
+										<i class="icon-right-arrow"></i>
+									</a>
+								</div>
+							</div>
+							<div class="home-examples__column" data-rooms="3" data-floor="5" data-area="44.5" data-options="6">
+								<div class="examples-card">
+									<div class="examples-card__header">
+										<div class="examples-card__logo">
+											<i class="icon-logo-full"></i> <span class="examples-card__number">B21</span>
+										</div>
+										<i class="icon-heart"></i>
+									</div>
+									<div class="examples-card__img">
+										<img src="./img/building-img-03.jpg" alt="examples" />
+										<div class="examples-card__offer">GOTOWE DO ODBIORU</div>
+									</div>
+									<div class="examples-card__info">
+										<span>44,50 m2</span>
+										<span>3 pokoje</span>
+										<span>5 piętro</span>
+									</div>
+									<a href="#" class="examples-card__ask">zapytaj o cenę</a>
+									<a href="flat.html" class="examples-card__link">
+										<span>Zobacz więcej</span>
+										<i class="icon-right-arrow"></i>
+									</a>
+								</div>
+							</div>
+							<div class="home-examples__column" data-rooms="3" data-floor="3" data-area="56" data-options="5">
+								<div class="examples-card">
+									<div class="examples-card__header">
+										<div class="examples-card__logo">
+											<i class="icon-logo-full"></i> <span class="examples-card__number">B03</span>
+										</div>
+										<i class="icon-heart"></i>
+									</div>
+									<div class="examples-card__img">
+										<img src="./img/building-img-03.jpg" alt="examples" />
+										<div class="examples-card__offer examples-card__offer_s">OFERTA SPECJALNA</div>
+									</div>
+									<div class="examples-card__info">
+										<span>56 m2</span>
+										<span>3 pokoje</span>
+										<span>3 piętro</span>
+									</div>
+									<a href="#" class="examples-card__ask">zapytaj o cenę</a>
+									<a href="flat.html" class="examples-card__link">
+										<span>Zobacz więcej</span>
+										<i class="icon-right-arrow"></i>
+									</a>
+								</div>
+							</div>
+							<div class="home-examples__column" data-rooms="4" data-floor="1" data-area="67.5" data-options="6">
+								<div class="examples-card">
+									<div class="examples-card__header">
+										<div class="examples-card__logo">
+											<i class="icon-logo-full"></i> <span class="examples-card__number">B21</span>
+										</div>
+										<i class="icon-heart"></i>
+									</div>
+									<div class="examples-card__img">
+										<img src="./img/building-img-03.jpg" alt="examples" />
+										<div class="examples-card__offer">GOTOWE DO ODBIORU</div>
+									</div>
+									<div class="examples-card__info">
+										<span>67,50 m2</span>
+										<span>4 pokoje</span>
+										<span>1 piętro</span>
+									</div>
+									<a href="#" class="examples-card__ask">zapytaj o cenę</a>
+									<a href="flat.html" class="examples-card__link">
+										<span>Zobacz więcej</span>
+										<i class="icon-right-arrow"></i>
+									</a>
+								</div>
+							</div>
+							<div class="home-examples__column" data-rooms="2" data-floor="2" data-area="42" data-options="1">
+								<div class="examples-card">
+									<div class="examples-card__header">
+										<div class="examples-card__logo">
+											<i class="icon-logo-full"></i> <span class="examples-card__number">B5</span>
+										</div>
+										<i class="icon-heart"></i>
+									</div>
+									<div class="examples-card__img">
+										<img src="./img/building-img-03.jpg" alt="examples" />
+										<div class="examples-card__offer">GOTOWE DO ODBIORU</div>
+									</div>
+									<div class="examples-card__info">
+										<span>42 m2</span>
+										<span>2 pokoje</span>
+										<span>2 piętro</span>
+									</div>
+									<a href="#" class="examples-card__ask">zapytaj o cenę</a>
+									<a href="flat.html" class="examples-card__link">
+										<span>Zobacz więcej</span>
+										<i class="icon-right-arrow"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="home-examples__column" data-rooms="1" data-floor="1" data-area="25" data-options="5">
+								<div class="examples-card">
+									<div class="examples-card__header">
+										<div class="examples-card__logo">
+											<i class="icon-logo-full"></i> <span class="examples-card__number">B03</span>
+										</div>
+										<i class="icon-heart"></i>
+									</div>
+									<div class="examples-card__img">
+										<img src="./img/building-img-03.jpg" alt="examples" />
+										<div class="examples-card__offer examples-card__offer_s">OFERTA SPECJALNA</div>
+									</div>
+									<div class="examples-card__info">
+										<span>25 m2</span>
+										<span>1 pokoje</span>
+										<span>1 piętro</span>
+									</div>
+									<a href="#" class="examples-card__ask">zapytaj o cenę</a>
+									<a href="flat.html" class="examples-card__link">
+										<span>Zobacz więcej</span>
+										<i class="icon-right-arrow"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-contacts section-contacts_w _pp">
+					<img src="./img/building-img-02.png" alt="" />
+					<div class="_container section-contacts__container">
+						<div class="section-contacts__row">
+							<div class="section-contacts__column">
+								<div class="section-contacts__title section-title">Nowe mieszkania przy ul. Witosa w Opolu</div>
+							</div>
+							<div class="section-contacts__column">
+								<div class="square-info section-contacts__square">
+									<div class="square-info__title block-title">Biuro sprzedaży</div>
+									<div class="square-info__contacts contacts contacts_square-info">
+										<div class="contacts__item">
+											<div class="contacts__icon"><i class="icon-callback"></i></div>
+											<div class="contacts__phones">
+												<a href="tel:+48600600600" class="contacts__phone">tel. +48 600 600 600</a>
+												<a href="tel:+48600600600" class="contacts__phone">tel. +48 600 600 600</a>
+											</div>
+										</div>
+										<div class="contacts__item">
+											<div class="contacts__icon"><i class="icon-time"></i></div>
+											<div class="contacts__text">
+												<p class="contacts__desc">Pn. - Pt. 9:00 - 17:00</p>
+												<p class="contacts__desc">Sb. 10:00 - 16:00</p>
+											</div>
+										</div>
+										<a target="_blank" href="https://g.page/arteo-development?share" class="contacts__item">
+											<div class="contacts__icon"><i class="icon-map"></i></div>
+											<div class="contacts__text">
+												<p class="contacts__desc">Opole, 45-222</p>
+												<p class="contacts__desc">ul. Oleska 97H/2, I piętro</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form action="#" class="section-contacts__form">
+							<div class="block-title section-contacts__name"><span>Zapisz się do naszego </span>newslettera</div>
+							<label for="section-contacts__input"
+								>Prześlemy Ci tylko oferty związane z naszą inwestycją oraz promocje na inne nowe Arteo
+								Development</label
+							>
+							<div class="section-contacts__mail">
+								<input
+									type="email"
+									class="section-contacts__input"
+									id="section-contacts__input"
+									placeholder="Twój adres e-mail"
+								/>
+								<button class="section-contacts__btn btn">Zapisz się</button>
+							</div>
+						</form>
+					</div>
+					<!-- /_container -->
+				</div>
+			</main>
+			<!-- /.main -->
+			<footer class="footer">
+				<div class="footer__row _pp">
+					<div class="footer__column">
+						<div class="footer__info">
+							<h3 class="footer__title">Arteo Development</h3>
+							<div class="footer__description">
+								Twój sprawdzony deweloper.Mieszkania o najwyższym standardziezawsze w najlepszych lokalizacjach.
+							</div>
+							<p class="footer__text">
+								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+								Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+								Hampden-Sydney College in Virginia.
+							</p>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__contacts contacts">
+							<a target="_blank" href="https://g.page/arteo-development?share" class="contacts__item">
+								<div class="contacts__icon"><i class="icon-map"></i></div>
+								<div class="contacts__text">
+									<h4 class="contacts__title">Biuro sprzedaży:</h4>
+									<p class="contacts__desc">Opole 45-222ul. Oleska 97H/2I piętro</p>
+								</div>
+							</a>
+							<div class="contacts__item">
+								<div class="contacts__icon"><i class="icon-callback"></i></div>
+								<div class="contacts__phones">
+									<a href="tel:+48600600600" class="contacts__phone">tel. +48 600 600 600</a>
+									<a href="tel:+48600600600" class="contacts__phone">tel. +48 600 600 600</a>
+									<a href="tel:+48600600600" class="contacts__phone">tel. +48 600 600 600</a>
+								</div>
+							</div>
+							<a target="_blank" href="https://goo.gl/maps/PwJQqNdGHyc9eDG28" class="contacts__item">
+								<div class="contacts__icon"><i class="icon-map"></i></div>
+								<div class="contacts__text">
+									<h4 class="contacts__title">Siedziba Firmy:</h4>
+									<p class="contacts__desc">Palisadowa 20/2201-940 Warszwa</p>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:biuro@arteodevelopment.pl" class="contacts__item">
+								<div class="contacts__icon"><i class="icon-open-mail"></i></div>
+								<span>biuro@arteodevelopment.pl</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy _pp">
+					<div class="footer__name">Wszelkie prawa zastrzeżone: <span>Arteo Development 2021</span></div>
+					<div class="footer__name footer__name_right">
+						Projekt strony internetowej: <a href="https://redmustang.pl" target="_blank">redMustang®</a>
+					</div>
+				</div>
+			</footer>
+			<!-- /.footer -->
+		</div>
+		<!-- /.wrapper -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./js/libs/nouislider.min.js"></script>
+		<script src="./js/libs/wNumb.min.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

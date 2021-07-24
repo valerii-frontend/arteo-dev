@@ -1,0 +1,201 @@
+.footer {
+	background: #f6f6f6;
+	color: $text;
+	/* .footer__row */
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiv-value("padding-top", 70, 20, 1);
+		@include adaptiv-value("padding-bottom", 70, 20, 1);
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+	/* .footer__column */
+	&__column {
+		flex: 0 1 40%;
+		&:last-child {
+			flex: 0 1 60%;
+		}
+	}
+	/* .footer__info */
+	&__info {
+		max-width: 95%;
+		padding-right: 20px;
+		@media (max-width: 992px) {
+			padding-right: 0px;
+			@include adaptiv-value("margin-bottom", 40, 20, 1);
+		}
+	}
+	/* .footer__title */
+	&__title {
+		font-weight: 500;
+		@include adaptiv-font(36, 24, 1);
+		@include adaptiv-value("margin-bottom", 50, 20, 1);
+		line-height: 44/36 * 100%;
+	}
+	/* .footer__description */
+	&__description {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 150%;
+		margin-bottom: 20px;
+	}
+	/* .footer__text */
+	&__text {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 167%;
+	}
+	/* .footer__copy */
+	&__copy {
+		color: $w;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		background: $grad;
+		justify-content: space-between;
+		margin: 0 -10px;
+	}
+	/* .footer__name */
+	&__name {
+		font-weight: 300;
+		@include adaptiv-font(12, 10, 1);
+		line-height: 150%;
+		flex: 0 0 50%;
+		padding: 0 10px;
+		&_right {
+			text-align: right;
+		}
+		span,
+		a {
+			font-weight: 700;
+		}
+		a {
+			color: rgba($main, 0.5);
+			@media (min-width: 992px) {
+				transition: 0.3s;
+				&:hover {
+					transition: 0.3s;
+					color: $main;
+				}
+			}
+		}
+	}
+}
+.contacts {
+	&_square-info {
+		/* .contacts__desc */
+		.contacts__desc {
+			@include adaptiv-font(22, 14, 1);
+		}
+		/* .contacts__item */
+		.contacts__item {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				@include adaptiv-value("bottom", -25, -12.5, 1);
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $w;
+			}
+			@media (min-width: 992px) {
+				transition: 0.5s ease;
+				&:hover {
+					transform: scale(1.05);
+					transition: 0.5s ease;
+					color: $w;
+					.contacts__icon {
+						color: $w;
+					}
+				}
+			}
+		}
+	}
+	display: flex;
+	flex-wrap: wrap;
+	/* .contacts__item */
+	&__item {
+		flex: 0 0 50%;
+		color: inherit;
+		display: flex;
+		align-items: center;
+		@include adaptiv-value("margin-bottom", 50, 10, 1);
+		@media (min-width: 992px) {
+			transition: 0.3s;
+			&:hover {
+				transition: 0.3s;
+				color: $main;
+				.contacts__icon {
+					transition: 0.5s ease;
+					color: $scnd;
+					animation: jump 1s infinite alternate;
+					@keyframes jump {
+						from {
+							transform: scale(1);
+						}
+						50% {
+							transform: scale(0.97);
+						}
+						to {
+							transform: scale(1.03);
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: 769px) {
+			transition: 0.3s;
+			flex: 1 1 100%;
+		}
+		span {
+			font-weight: 300;
+			@include adaptiv-font(18, 15, 1);
+			line-height: 133%;
+			text-decoration: underline;
+		}
+	}
+	/* .contacts__icon */
+	&__icon {
+		transition: 0.5s ease;
+		@include adaptiv-font(64, 48, 1);
+		@include adaptiv-value("margin-right", 40, 15, 1);
+	}
+	/* .contacts__title */
+	&__title {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 157%;
+		@include adaptiv-value("margin-bottom", 25, 10, 1);
+	}
+	/* .contacts__desc */
+	&__desc {
+		font-size: 14px;
+		line-height: 157%;
+		font-weight: 300;
+	}
+	/* .contacts__phone */
+	&__phone {
+		margin-bottom: 10px;
+		font-weight: 300;
+		@include adaptiv-font(24, 16, 1);
+		line-height: 150%;
+		white-space: nowrap;
+		color: inherit;
+		@media (min-width: 992px) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	/* .contacts__phone */
+	&__phones {
+		display: flex;
+		flex-direction: column;
+	}
+}
